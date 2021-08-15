@@ -33,6 +33,9 @@
     "playground-e2e": {
       "tags": [],
       "implicitDependencies": ["playground"]
+    },
+    "walletconnect": {
+      "tags": []
     }
   }
 }

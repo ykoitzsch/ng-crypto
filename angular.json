@@ -119,6 +119,47 @@
           }
         }
       }
+    },
+    "walletconnect": {
+      "projectType": "library",
+      "root": "libs/walletconnect",
+      "sourceRoot": "libs/walletconnect/src",
+      "prefix": "isleepcode",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/walletconnect"],
+          "options": {
+            "project": "libs/walletconnect/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/walletconnect/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/walletconnect/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/walletconnect"],
+          "options": {
+            "jestConfig": "libs/walletconnect/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/walletconnect/src/**/*.ts",
+              "libs/walletconnect/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
